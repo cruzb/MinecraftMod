@@ -1,0 +1,11 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "witchmod:corn"
+		}
+	],
+	"result": {
+		"item": "witchmod:corn_seed"
+	}
+}

@@ -3,6 +3,7 @@ package com.bradcruz.minecraft.proxy;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
+import net.minecraft.util.text.translation.I18n;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -33,5 +34,12 @@ public class CommonProxy {
     }
 
     public void registerItemRenderer(Item item, int meta, String id) {
+    }
+
+    public String localize(String unlocalized, Object... args) {
+        return I18n.translateToLocalFormatted(unlocalized, args);
+    }
+
+    public void registerRenderers() {
     }
 }

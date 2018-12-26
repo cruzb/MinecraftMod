@@ -1,0 +1,12 @@
+{
+	"forge_marker": 1,
+	"variants": {
+		"normal": {
+			"model": "witchmod:pedestal"
+		},
+		"inventory": {
+			"model": "witchmod:pedestal",
+			"transform": "forge:default-block"
+		}
+	}
+}

@@ -1,5 +1,10 @@
 #Items
 item.witchmod.ingot_copper.name=Copper Ingot
+item.witchmod.corn.name=Corn
+item.witchmod.corn_seed.name=Corn Seed
 
 #Blocks
 tile.witchmod.ore_copper.name=Copper Ore
+
+#Creative 
+itemGroup.witchmod=Witches and Wizards

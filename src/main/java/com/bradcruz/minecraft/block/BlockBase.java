@@ -11,20 +11,19 @@ import net.minecraft.item.ItemBlock;
 public class BlockBase extends Block {
 
     protected String name;
-    private String registryName;
 
     public BlockBase(Material material, String name) {
         super(material);
 
-        this.name = WitchMod.modId + "." + name;
-        this.registryName = name;
+        this.name = name;
 
-        setUnlocalizedName(this.name);
-        setRegistryName(this.name);
+        setUnlocalizedName(WitchMod.modId + "." + name);
+        setRegistryName(name);
+        setCreativeTab(WitchMod.creativeTab);
     }
 
     public void registerItemModel(Item itemBlock) {
-        WitchMod.proxy.registerItemRenderer(itemBlock, 0, registryName);
+        WitchMod.proxy.registerItemRenderer(itemBlock, 0, name);
     }
 
     public Item createItemBlock() {

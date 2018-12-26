@@ -1,4 +1,4 @@
-package com.bradcruz.minecraft.items;
+package com.bradcruz.minecraft.item;
 
 import com.bradcruz.minecraft.WitchMod;
 
@@ -8,18 +8,17 @@ import net.minecraft.item.Item;
 public class ItemBase extends Item {
 
     protected String name;
-    private String registryName;
 
     public ItemBase(String name) {
-        this.name = WitchMod.modId + "." + name;
-        this.registryName = name;
+        this.name = name;
 
-        setUnlocalizedName(this.name);
-        setRegistryName(this.name);
+        setUnlocalizedName(WitchMod.modId + "." + name);
+        setRegistryName(name);
+        setCreativeTab(WitchMod.creativeTab);
     }
 
     public void registerItemModel() {
-        WitchMod.proxy.registerItemRenderer(this, 0, registryName);
+        WitchMod.proxy.registerItemRenderer(this, 0, name);
     }
 
     @Override
